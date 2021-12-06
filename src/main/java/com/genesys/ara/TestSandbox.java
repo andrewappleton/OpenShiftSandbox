@@ -23,9 +23,9 @@ public class TestSandbox {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("https://api.sandbox-m2.ll9k.p1.openshiftapps.com:6443/apis/project.openshift.io/v1/projects")
+                .url("")
                 .method("GET", null)
-                .addHeader("Authorization", "Bearer sha256~UpE1bfN9ySsV4X80cQvR8aJxbf4RGtgvL5AuJGVdV38")
+                .addHeader("Authorization", "Bearer ")
                 .build();
         Response response = client.newCall(request).execute();
         System.out.println(response.body().string());
@@ -66,9 +66,9 @@ public class TestSandbox {
 
         OkHttpClient okHttpClient = builder.build();
         Request request = new Request.Builder()
-                .url("https://api.crc.testing:6443/apis/project.openshift.io/v1/projects")
+                .url("")
                 .method("GET", null)
-                .addHeader("Authorization", "Bearer sha256~kvYxXXGIBifi6PMLt8wQI0PLgiM-ALuPUv0J0d9FLyA")
+                .addHeader("Authorization", "Bearer ")
                 .build();
         Response response = okHttpClient.newCall(request).execute();
         System.out.println(response.body().string());
